@@ -1,0 +1,7 @@
+:root { --wiki-accent: #6750a4; }
+.md-header, .md-tabs { background: var(--wiki-accent); }
+.simulator { border: 1px solid var(--md-default-fg-color--lightest); border-radius: .6rem; padding: 1rem; margin: 1rem 0 2rem; }
+.simulator label { display: block; font-weight: 600; margin: .7rem 0 .25rem; }
+.simulator input { box-sizing: border-box; width: 100%; max-width: 32rem; padding: .55rem; border: 1px solid var(--md-default-fg-color--light); border-radius: .25rem; }
+.simulator button { display: block; margin-top: 1rem; padding: .6rem 1rem; border: 0; border-radius: .3rem; background: var(--wiki-accent); color: white; font-weight: 600; cursor: pointer; }
+.simulator pre { white-space: pre-wrap; overflow-wrap: anywhere; }

@@ -1,0 +1,49 @@
+﻿site_name: Wiki de Sistemas Operativos 1
+site_description: Base de conocimientos acadÃ©mica sobre sistemas operativos
+site_author: Marisol
+site_url: https://Mari032001.github.io/wiki-sistemas-operativos/
+repo_url: https://github.com/Mari032001/wiki-sistemas-operativos
+repo_name: Mari032001/wiki-sistemas-operativos
+nav:
+  - Inicio: index.md
+  - Diccionario: diccionario.md
+  - Unidad 1 - IntroducciÃ³n: unidades/unidad1.md
+  - Unidad 2 - Procesos: unidades/unidad2.md
+  - Unidad 3 - Concurrencia: unidades/unidad3.md
+  - Unidad 4 - Interbloqueos: unidades/unidad4.md
+  - Unidad 5 - Memoria: unidades/unidad5.md
+  - Simuladores: simuladores.md
+  - Arquitectura y desarrollo: DEVELOPMENT.md
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - tables
+  - toc:
+      permalink: true
+plugins:
+  - search
+extra_javascript:
+  - assets/simulators.js
+  - assets/diccionario.js
+extra_css:
+  - assets/styles.css
+
+
+
+
+
