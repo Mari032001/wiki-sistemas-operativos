@@ -1,0 +1,196 @@
+﻿/* Estilos exclusivos del Simulador de Procesos */
+.simulador-procesos {
+  --sp-rosa-fondo: #FFF0F6;
+  --sp-rosa-claro: #FFE4EF;
+  --sp-rosa: #F48FB1;
+  --sp-rosa-fuerte: #E91E63;
+  --sp-rosa-oscuro: #AD1457;
+  --sp-texto: #5A3040;
+  color: var(--sp-texto);
+  margin: 1rem 0 2rem;
+}
+
+.simulador-procesos .sp-encabezado {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #FFF0F6, #F8BBD0);
+  border: 1px solid #F48FB1;
+  text-align: center;
+}
+
+.simulador-procesos .sp-encabezado h2 {
+  margin: 0 0 .5rem;
+  color: #AD1457;
+}
+
+.simulador-procesos .sp-encabezado p {
+  margin: 0;
+}
+
+.simulador-procesos .sp-metricas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1rem 0;
+}
+
+.simulador-procesos .sp-metrica {
+  background: #FFF0F6;
+  border: 1px solid #F48FB1;
+  border-radius: .7rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.simulador-procesos .sp-metrica span,
+.simulador-procesos .sp-metrica strong {
+  display: block;
+}
+
+.simulador-procesos .sp-metrica span {
+  font-size: .9rem;
+  margin-bottom: .4rem;
+}
+
+.simulador-procesos .sp-metrica strong {
+  font-size: 1.35rem;
+  color: #AD1457;
+}
+
+.simulador-procesos .sp-panel {
+  border: 1px solid #F3C4D5;
+  border-radius: .8rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: var(--md-default-bg-color);
+}
+
+.simulador-procesos .sp-panel h3 {
+  color: #AD1457;
+  margin-top: 0;
+}
+
+.simulador-procesos label {
+  display: block;
+  font-weight: 600;
+  margin: .75rem 0 .3rem;
+}
+
+.simulador-procesos input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 35rem;
+  padding: .65rem;
+  border: 1px solid #E9A3BD;
+  border-radius: .4rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+
+.simulador-procesos input:focus {
+  outline: 2px solid #E91E63;
+  outline-offset: 2px;
+}
+
+.simulador-procesos .sp-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1rem;
+}
+
+.simulador-procesos button {
+  padding: .7rem 1rem;
+  border: 0;
+  border-radius: .45rem;
+  background: #E91E63;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.simulador-procesos button:hover {
+  background: #AD1457;
+}
+
+.simulador-procesos button:focus-visible {
+  outline: 3px solid #AD1457;
+  outline-offset: 3px;
+}
+
+.simulador-procesos .sp-mensaje {
+  padding: .75rem;
+  border-radius: .4rem;
+  background: #FFF0F6;
+  border-left: 4px solid #E91E63;
+  overflow-wrap: anywhere;
+}
+
+.simulador-procesos .sp-mensaje.sp-error {
+  border-left-color: #B3261E;
+  background: #FCE8E6;
+}
+
+.simulador-procesos .sp-barra-fondo {
+  height: 1.4rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #F5D9E4;
+}
+
+.simulador-procesos .sp-barra {
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #F48FB1, #E91E63);
+  transition: width .25s ease;
+}
+
+.simulador-procesos .sp-tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.simulador-procesos .sp-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 32rem;
+}
+
+.simulador-procesos .sp-tabla th,
+.simulador-procesos .sp-tabla td {
+  padding: .65rem;
+  border: 1px solid #F3C4D5;
+  text-align: left;
+}
+
+.simulador-procesos .sp-tabla th {
+  background: #FCE4EC;
+  color: #880E4F;
+}
+
+.simulador-procesos .sp-tabla tbody tr:nth-child(even) {
+  background: #FFF7FA;
+}
+
+.simulador-procesos #sp-historial {
+  padding-left: 1.5rem;
+}
+
+.simulador-procesos #sp-historial li {
+  margin: .4rem 0;
+}
+
+@media (max-width: 600px) {
+  .simulador-procesos .sp-metricas {
+    grid-template-columns: 1fr;
+  }
+
+  .simulador-procesos .sp-botones {
+    flex-direction: column;
+  }
+
+  .simulador-procesos button {
+    width: 100%;
+  }
+}

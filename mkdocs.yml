@@ -13,6 +13,7 @@ nav:
   - Unidad 4 - Interbloqueos: unidades/unidad4.md
   - Unidad 5 - Memoria: unidades/unidad5.md
   - Simuladores: simuladores.md
+  - Simulador de Procesos: simulador-procesos.md
   - Arquitectura y desarrollo: DEVELOPMENT.md
 theme:
   name: material
@@ -40,8 +41,11 @@ plugins:
 extra_javascript:
   - assets/simulators.js
   - assets/diccionario.js
+  - assets/simulador-procesos.js
 extra_css:
   - assets/styles.css
+  - assets/simulador-procesos.css
+
 
 
 
