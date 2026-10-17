@@ -116,3 +116,49 @@ print(round_robin({"P1": 5, "P2": 3, "P3": 1}, 2))
 
 - Silberschatz, Galvin y Gagne, *Operating System Concepts*.
 - Manuales de Linux: `man fork`, `man exec`, `man ps`.
+
+## 2.4 Procesos y Threads (Hilos)
+
+### 📌 ¿Qué es un Hilo?
+
+Un **hilo** es la unidad más pequeña de ejecución secuencial de instrucciones que un sistema operativo puede planificar y gestionar. Cada hilo forma parte de un proceso, y varios hilos dentro del mismo proceso comparten recursos entre sí.
+
+---
+
+### 🔄 Diferencia entre Proceso y Hilo
+
+| Característica | Proceso | Hilo |
+|---|---|---|
+| **Definición** | Programa en ejecución | Flujo de ejecución dentro de un proceso |
+| **Espacio de memoria** | Tiene su propio espacio de memoria privado | Comparte el espacio de memoria del proceso al que pertenece |
+| **Creación** | Más costosa en tiempo y recursos | Más ligera y rápida de crear |
+| **Comunicación** | Requiere mecanismos especiales (tuberías, colas, señales) | Pueden comunicarse mediante variables compartidas del proceso |
+| **Cambio de contexto** | Más lento | Más rápido y con menor sobrecarga |
+| **Independencia** | Es independiente de otros procesos | Depende del proceso que lo contiene |
+
+---
+
+### 🧠 Recursos compartidos y privados
+
+#### ✅ Recursos COMPARTIDOS entre hilos de un mismo proceso:
+- Espacio de direcciones / memoria virtual
+- Archivos abiertos
+- Señales y manejadores de señales
+- Tabla de páginas de memoria
+
+#### 🔒 Recursos PRIVADOS de cada hilo:
+- Contador de programa — indica qué instrucción ejecuta
+- Registros de la CPU — valores propios de cada hilo
+- Pila — para sus llamadas a funciones y variables locales
+- Estado del hilo
+
+---
+
+### 💡 En resumen
+
+> Un proceso es como una "aplicación completa", mientras que los hilos son las "tareas internas" que realiza esa aplicación al mismo tiempo.
+
+- Crear un hilo es **mucho más rápido** que crear un proceso
+- Los hilos de un mismo proceso **comparten la memoria**
+- Si el proceso termina, **todos sus hilos terminan con él**
+-
